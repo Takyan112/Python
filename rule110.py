@@ -3,7 +3,7 @@ n = 110
 
 x = 1
 for i in range(n):
-	print(f"{''.join(('@' if i == '1' else ' ' for i in bin(x)[2:])):>{n}}")
+	print(' ' * (n - i) + ''.join(('@' if i == '1' else ' ' for i in bin(x)[2:])))
 
 	j = 0
 	y = 0
@@ -13,5 +13,3 @@ for i in range(n):
 		x >>= 1
 		j += 1
 	x = y
-	
-	
