@@ -1,5 +1,6 @@
 # Python
 
-Python 3.4.4  
-Numpy 1.15.4  
-Pillow 5.3.0
+![game of life](image/game_of_life.png)
+![mandelbrot set](image/mandelbrot_set.png)
+![neural network](image/neural_network.png)
+![rule110](image/rule110.png)
