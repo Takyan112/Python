@@ -5,6 +5,7 @@ class brainfuck:
   
   def run(self, program):
     counter = 0
+    output = ""
     
     while counter < len(program):
       if program[counter] == '>':
@@ -16,7 +17,7 @@ class brainfuck:
       elif program[counter] == '-':
         self.tape[self.head] = (self.tape[self.head] - 1) % 256
       elif program[counter] == '.':
-        print(chr(self.tape[self.head]), end='')
+        output += chr(self.tape[self.head])
       elif program[counter] == ',':
         self.tape[self.head] = ord(input()[0])
       elif program[counter] == '[':
@@ -40,6 +41,8 @@ class brainfuck:
               level += 1
             counter -= 1
       counter += 1
+    print(output)
+    return output
 
 if __name__ == "__main__":
   bf = brainfuck();
