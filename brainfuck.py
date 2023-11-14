@@ -8,9 +8,9 @@ class brainfuck:
     
     while counter < len(program):
       if program[counter] == '>':
-        self.head += 1
+        self.head = (self.head + 1) % 30000
       elif program[counter] == '<':
-        self.head -= 1
+        self.head = (self.head - 1) % 30000
       elif program[counter] == '+':
         self.tape[self.head] = (self.tape[self.head] + 1) % 256
       elif program[counter] == '-':
